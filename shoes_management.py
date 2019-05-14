@@ -12,7 +12,6 @@ def get_shoe_list():
   """Retorna una lista de zapatos con datos aleatorios obtenidos de la función get_shoe_types()."""
   shoe_types, shoe_colors, shoe_sizes = get_shoe_types()
   shoe_list = []
-
   for i in range(1, 10):
     shoe_size = randint(shoe_sizes[0], shoe_sizes[1])
 
@@ -104,14 +103,20 @@ def find_shoe(shoe_list, code):
 
 def dispatch_shoes(shoe_list, shoe, quantity):
   """Resta la cantidad quantity de zapatos del modelo especificado."""
+  # Busca el índice donde se encuentra el zapato en la lista.
   shoe_index = shoe_list.index(shoe)
+  # Resta la cantidad de zapatos a despachar.
   shoe['cantidad'] -= quantity
+  # Actualiza la lista con el zapato modificado.
   shoe_list[shoe_index] = shoe
 
 def fabricate_shoes(shoe_list, shoe, quantity):
   """Suma la cantidad quantity de zapatos del modelo especificado."""
+  # Busca el índice donde se encuentra el zapato en la lista.
   shoe_index = shoe_list.index(shoe)
+  # Suma la cantidad de zapatos a despachar.
   shoe['cantidad'] += quantity
+  # Actualiza la lista con el zapato modificado.
   shoe_list[shoe_index] = shoe
 
 def print_shoe_info(shoe):
