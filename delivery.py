@@ -1,6 +1,7 @@
 from shoes_management import *
 
 def send_shoe(shoe_list):
+  """Recibe la lista de zapatos para luego despachar el modelo seleccionado."""
   shoe = find_shoe(shoe_list, get_shoe_code())
 
   if shoe != False and shoe['cantidad'] > 0:

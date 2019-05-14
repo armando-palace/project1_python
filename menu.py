@@ -2,8 +2,10 @@ from shutil import get_terminal_size
 import delivery
 import manufacture
 import verify
+import table
 
 def display_menu():
+  """Muestra en pantalla el menú con todas las opciones de la aplicación."""
   columns, rows = get_terminal_size(fallback = (50, 50))
 
   print('¡Bienvenido a la Zapatienda!\n'.center(columns))
@@ -17,10 +19,12 @@ def display_menu():
   print('5. Salir\n')
 
 def get_option():
-  print('Por favor, escoja una opción del menú: \n')
+  """Solicita al usuario una opción a ejecutar del menú."""
+  print('Por favor, escoja una opción del menú:\n')
   return input('Opción: ')
 
 def execute_option(shoe_list, option):
+  """Ejecuta una opción del menú."""
   if option == '1':
     delivery.send_shoe(shoe_list)
   elif option == '2':
@@ -28,7 +32,7 @@ def execute_option(shoe_list, option):
   elif option == '3':
     verify.show_shoe(shoe_list)
   elif option == '4':
-    print('Implementación de la opción 4')
+    table.show_table(shoe_list)
   elif option == '5':
     print('¡Gracias por usar nuestra aplicación!')
     return option

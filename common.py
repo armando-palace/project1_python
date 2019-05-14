@@ -1,11 +1,12 @@
 from os import system, name
 from time import sleep
 
-def clear(): 
-  # for windows 
-  if name == 'nt': 
-    _ = system('cls') 
+def clear():
+  """Despeja la pantalla del terminal según el sistema operativo."""
+  # Para Windows
+  if name == 'nt':
+    _ = system('cls')
 
-  # for mac and linux(here, os.name is 'posix') 
-  else: 
+  # Para Mac y Linux (aquí, os.name es 'posix')
+  else:
     _ = system('clear')

@@ -1,6 +1,7 @@
 from shoes_management import *
 
 def make_shoe(shoe_list):
+  """Recibe la lista de zapatos para luego fabricar el modelo seleccionado."""
   quantity = -1
   shoe = find_shoe(shoe_list, get_shoe_code())
   if shoe == False:
