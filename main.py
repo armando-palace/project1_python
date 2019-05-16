@@ -11,6 +11,9 @@ clear()
 # shoe_list = get_shoe_list()
 shoe_list = get_predefined_shoe_list()
 
+# print(get_predefined_shoe_list.__doc__)
+# help(get_predefined_shoe_list)
+
 # Mientras que la opción no sea "5", no se sale de la aplicación.
 while option != '5':
   menu.display_menu()
